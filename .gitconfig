@@ -14,5 +14,12 @@
 [commit]
 	gpgsign = true
 [alias]
-ch = !git checkout $(git reflog show --pretty=format:'%gs ~ %gd' --date=relative | grep 'checkout:' | grep -oE '[^ ]+ ~ .*' | awk -F~ '!seen[$    1]++' | head -n 20 | cut -d '~' -f 1 | fzf)
+        aliases = config --get-regexp alias
+        l = log
+        s = status
+        d = diff
+        c = commit -m
+
+        # fzf git checkout
+        ch = !git checkout $(git reflog show --pretty=format:'%gs ~ %gd' --date=relative | grep 'checkout:' | grep -oE '[^ ]+ ~ .*' | awk -F~ '!seen[$    1]++' | head -n 20 | cut -d '~' -f 1 | fzf)
 

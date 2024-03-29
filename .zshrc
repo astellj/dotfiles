@@ -15,12 +15,6 @@ source /usr/local/bin/navigation_scripts.sh
 # Prevent last login message from displying on startup
 printf '\33c\e[3J'
 
-# Git aliases
-alias gs='git status'
-alias gc='git commit -m'
-alias gl='git log'
-alias gd='git diff'
-
 # eza aliases
 alias ld='eza -lD'
 alias lf='eza -lf --color=always | grep -v /'
