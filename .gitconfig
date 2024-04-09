@@ -1,25 +1,22 @@
 [user]
-	name = James Astell
-	email = mrjamerjamer@gmail.com
-	signingkey = ~/.ssh/id_ed25519.pub
+    name = James Astell
+    email = mrjamerjamer@gmail.com
+    signingkey = ~/.ssh/id_ed25519.pub
 [push]
-	default = current
+    default = current
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
 [gpg]
-	format = ssh
+    format = ssh
 [commit]
-	gpgsign = true
+    gpgsign = true
 [alias]
-        aliases = config --get-regexp alias
-        l = log
-        s = status
-        d = diff
-        c = commit -m
-
-        # fzf git checkout
-        ch = !git checkout $(git reflog show --pretty=format:'%gs ~ %gd' --date=relative | grep 'checkout:' | grep -oE '[^ ]+ ~ .*' | awk -F~ '!seen[$    1]++' | head -n 20 | cut -d '~' -f 1 | fzf)
+    aliases = config --get-regexp alias
+    l = log
+    s = status
+    d = diff
+    c = commit -m
 

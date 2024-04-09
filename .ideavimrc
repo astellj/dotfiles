@@ -33,7 +33,5 @@ Plug 'tpope/vim-commentary'
 "" Map \b to toggle the breakpoint on the current line
 "map \b <Action>(ToggleLineBreakpoint)
 
-"" Set relative line numbers
-set number relativenumber
-
 set NERDTree
+

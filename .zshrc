@@ -9,6 +9,7 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 source ~/.zsh/custom/custom.zsh
+source ~/.zsh/custom/git-fzf.zsh
 
 source /usr/local/bin/navigation_scripts.sh
 
