@@ -10,8 +10,8 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 source ~/.zsh/custom/custom.zsh
 source ~/.zsh/custom/git-fzf.zsh
-
-source /usr/local/bin/navigation_scripts.sh
+source ~/.zsh/custom/navigation-scripts.zsh
+source ~/.zsh/custom/update-jetset.zsh
 
 # Prevent last login message from displying on startup
 printf '\33c\e[3J'
@@ -23,9 +23,6 @@ alias lh='eza -dl .* --group-directories-first'
 alias ll='eza -al --group-directories-first'
 alias ls='eza -alf --color=always --sort=size | grep -v /'
 alias lt='eza -al --sort=modified'
-
-# Alias for updating jetset
-alias update_jetset_dev='git_update_jetset.sh'
 
 # Make new dir and cd into it
 mkcdir ()
