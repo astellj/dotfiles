@@ -8,6 +8,7 @@ export STARSHIP_CONFIG=~/.config/starship.toml
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
+source ~/.zsh/custom/aliases.zsh
 source ~/.zsh/custom/custom.zsh
 source ~/.zsh/custom/git-fzf.zsh
 source ~/.zsh/custom/navigation-scripts.zsh
@@ -15,21 +16,6 @@ source ~/.zsh/custom/update-jetset.zsh
 
 # Prevent last login message from displying on startup
 printf '\33c\e[3J'
-
-# eza aliases
-alias ld='eza -lD'
-alias lf='eza -lf --color=always | grep -v /'
-alias lh='eza -dl .* --group-directories-first'
-alias ll='eza -al --group-directories-first'
-alias ls='eza -alf --color=always --sort=size | grep -v /'
-alias lt='eza -al --sort=modified'
-
-# Make new dir and cd into it
-mkcdir ()
-{
-    mkdir -p -- "$1" &&
-       cd -P -- "$1"
-}
 
 autoload -Uz compinit
 compinit
