@@ -18,5 +18,7 @@
     l = log
     s = status
     d = diff
-    c = commit -m
+    cm = commit -m
+    co = checkout
+    cob = checkout -b
 
