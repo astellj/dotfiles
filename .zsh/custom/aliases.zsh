@@ -6,6 +6,7 @@ alias ll='eza -al --group-directories-first'
 alias ls='eza -alf --color=always --sort=size | grep -v /'
 alias lt='eza -al --sort=modified'
 
+# make a new dir and cd into it
 mkcdir ()
 {
     mkdir -p -- "$1" &&
