@@ -1,8 +1,10 @@
 #!/bin/zsh
 
-go()
-{
-    case "$1" in
+go() {
+    local selected_option
+    selected_option=$(echo "vault\ndotfiles\ndev\npersonal\nplay\nplay10\nplay12\nplay13\nplay17\nplay18\naccord\naccord-newskin\nsoeps\nt2channelhub\naspire2\nccep\nknauf\nportoftyne\nstada\nstrath\nucl\nyork\natm\ngoodwood\nnhm\nsolent\nstepan\ntarget-verature\nfxplus\nsibelco\nverature_plus\ndhl\nheresafe\nfusion21\njetset" | fzf --height 50% --ansi --no-multi --preview-window right:65%)
+
+    case "$selected_option" in
          vault)
             cd ~/Documents/Vault
             ;;
@@ -36,23 +38,23 @@ go()
          play24)
             cd ~/Developer/play/play24
             ;;
-         accord)
-            cd ~/Developer/play/play10/$1
+         accord|accord-newskin)
+            cd ~/Developer/play/play10/$selected_option
             ;;
          soeps|t2channelhub)
-            cd ~/Developer/play/play12/$1
+            cd ~/Developer/play/play12/$selected_option
             ;;
-         aspire|ccep|knauf|portoftyne|stada|strath|ucl|york|atm|goodwood|nhm|solent|stepan|target-verature|fxplus|sibelco)
-            cd ~/Developer/play/play13/$1
+         aspire2|ccep|knauf|portoftyne|stada|strath|ucl|york|atm|goodwood|nhm|solent|stepan|target-verature|fxplus|sibelco)
+            cd ~/Developer/play/play13/$selected_option
             ;;
          verature_plus|dhl)
-            cd ~/Developer/play/play17/$1
+            cd ~/Developer/play/play17/$selected_option
             ;;
          heresafe)
-            cd ~/Developer/play/play18/$1
+            cd ~/Developer/play/play18/$selected_option
             ;;
          fusion21)
-            cd ~/Developer/play/play24/$1
+            cd ~/Developer/play/play24/$selected_option
             ;;
          jetset)
             cd ~/Developer/spring-boot/jetset-demo
@@ -63,3 +65,6 @@ go()
     esac
 }
 
+if [[ "$1" == "go" ]]; then
+    go
+fi
