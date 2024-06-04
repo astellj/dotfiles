@@ -22,4 +22,3 @@ compinit
 
 # Enable SSH config host autocompletion
 zstyle ':completion:*:hosts' hosts $(sed -ne 's/Host[=\t ]//p' ~/.ssh/config)
-
