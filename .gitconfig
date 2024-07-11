@@ -18,6 +18,7 @@
     l = log
     s = status
     d = diff
+    r = remote -v
     cm = commit -m
     co = checkout
     cob = checkout -b
