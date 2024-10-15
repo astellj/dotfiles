@@ -3,7 +3,7 @@
     email = mrjamerjamer@gmail.com
     signingkey = ~/.ssh/id_ed25519.pub
 [push]
-    default = current
+	default = current
 [filter "lfs"]
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
