@@ -4,11 +4,17 @@
 " Find more examples here: https://jb.gg/share-ideavimrc
 
 
+set scrolloff=15
+set clipboard+=unnamed
+set surround
+
+let mapleader = " "
+
 Plug 'machakann/vim-highlightedyank'
 Plug 'preservim/nerdtree'
-Plug 'vim-matchit'
+Plug 'vim-matchit
 
-set scrolloff=10
+inoremap jk <Esc>
 
 " Maintain visual selection after indentation
 vnoremap < <gv
@@ -19,3 +25,6 @@ nnoremap <C-j> <C-w><C-j>
 nnoremap <C-k> <C-w><C-k>
 nnoremap <C-l> <C-w><C-l>
 nnoremap <C-h> <C-w><C-h>
+
+" Open NERDTree
+map <leader>x :NERDTreeToggle<CR>

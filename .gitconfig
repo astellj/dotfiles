@@ -2,17 +2,22 @@
     name = James Astell
     email = mrjamerjamer@gmail.com
     signingkey = ~/.ssh/id_ed25519.pub
+
 [push]
 	default = current
+
 [filter "lfs"]
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
     process = git-lfs filter-process
     required = true
+
 [gpg]
     format = ssh
+
 [commit]
     gpgsign = true
+
 [alias]
     aliases = config --get-regexp alias
     l = log
@@ -23,3 +28,5 @@
     co = checkout
     cob = checkout -b
 
+[branch]
+	sort = -committerdate

@@ -1,4 +1,4 @@
-command_time = 2000
+command_timeout = 2000
 
 palette = 'default'
 
