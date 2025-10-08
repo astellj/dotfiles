@@ -22,3 +22,9 @@ compinit
 
 # Enable SSH config host autocompletion
 zstyle ':completion:*:hosts' hosts $(sed -ne 's/Host[=\t ]//p' ~/.ssh/config)
+
+export HISTFILE="$HOME/.zsh_history"
+export HISTSIZE=1000000000
+export SAVEHIST=1000000000
+setopt EXTENDED_HISTORY
+
