@@ -17,9 +17,6 @@ source ~/.zsh/custom/update-jetset.zsh
 # Prevent last login message from displying on startup
 printf '\33c\e[3J'
 
-autoload -Uz compinit
-compinit
-
 # Enable SSH config host autocompletion
 zstyle ':completion:*:hosts' hosts $(sed -ne 's/Host[=\t ]//p' ~/.ssh/config)
 
